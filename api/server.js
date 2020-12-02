@@ -9,7 +9,7 @@ const postsRouter = require('./posts/posts-router');
 // server.use goes here
 server.use(express.json());
 server.use(cors);
-// server.use('/api/posts', postsRouter);
+server.use('/api/posts', postsRouter);
 // server.use('/api/comments/', commentsRouter);
 
 server.get('/', (req, res) => {
