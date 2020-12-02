@@ -3,11 +3,14 @@ const cors = require('cors');
 const server = express();
 
 // Router imports will go here
+const postsRouter = require('./posts/posts-router');
+// const commentsRouter = require('./comments/comments-router');
 
 // server.use goes here
 server.use(express.json());
 server.use(cors);
-// server.use('/api/posts/posts-router', postsRouter)
+// server.use('/api/posts', postsRouter);
+// server.use('/api/comments/', commentsRouter);
 
 server.get('/', (req, res) => {
     res.send(`
